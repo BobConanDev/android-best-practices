@@ -128,7 +128,7 @@ Use different icons to distinguish the builds installed on a device—for exampl
 **Share debug app keystore file**
 Sharing the debug APK keystore file via the app repository saves time when testing on shared devices and avoids the uninstalling/reinstalling of the app. It also simplifies the processing of working with some Android SDKs, such as Facebook, which require the registration of a single key store hash. Unlike the release key file, the debug key file can safely be added to your repository.
 
-**Share code style formatting defintions**
+**Share code style formatting definitions**
 Sharing the code style and formatting definitions via the app repository helps ensure a visually consistent code base and makes code comprehension and reviews easier.
 
 ### Android Studio as your main IDE
@@ -148,7 +148,7 @@ Avoid adding Android Studio's specific configuration files, such as `.iml` files
 <a name="networklibs"></a>
 **Networking, caching, and images.** There are a couple of battle-proven solutions for performing requests to backend servers, which you should use rather than implementing your own client. We recommend basing your stack around [OkHttp](http://square.github.io/okhttp/) for efficient HTTP requests and using [Retrofit](http://square.github.io/retrofit/) to provide a typesafe layer. If you choose Retrofit, consider [Picasso](http://square.github.io/picasso/) for loading and caching images.
 
-Retrofit, Picasso and OkHttp are created by the same company, so they complement each other nicely and compatability issues are uncommon.
+Retrofit, Picasso and OkHttp are created by the same company, so they complement each other nicely and compatibility issues are uncommon.
 
 [Glide](https://github.com/bumptech/glide) is another option for loading and caching images. It has support for animated GIFs, circular images and claims of better performance than Picasso, but also a bigger method count.
 
@@ -266,7 +266,7 @@ You probably will need to do the same for buttons, but don't stop there yet. Go 
 **Split a large style file into other files.** You don't need to have a single `styles.xml` file. Android SDK supports other files out of the box, there is nothing magical about the name `styles`, what matters are the XML tags `<style>` inside the file. Hence you can have files `styles.xml`, `styles_home.xml`, `styles_item_details.xml`, `styles_forms.xml`. Unlike resource directory names which carry some meaning for the build system, filenames in `res/values` can be arbitrary.
 
 <a name="colorsxml"></a>
-**`colors.xml` is a color palette.** There should be nothing in your `colors.xml` other than a mapping from a color name to an RGBA value. This helps avoid repeating RGBA values and as such will make it easy to change or refactor colors, and also will make it explicit how many different colors are being used. Normally for a aesthetic UI, it is important to reduce the variety of colors being used.
+**`colors.xml` is a color palette.** There should be nothing in your `colors.xml` other than a mapping from a color name to an RGBA value. This helps avoid repeating RGBA values and as such will make it easy to change or refactor colors, and also will make it explicit how many different colors are being used. Normally for an aesthetic UI, it is important to reduce the variety of colors being used.
  
 *So, don't define your colors.xml like this:*
 
